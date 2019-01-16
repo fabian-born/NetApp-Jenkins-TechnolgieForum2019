@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  name: Volume Action
+  vars:
+    hostname: tfrm2019.frademo.europe.netapp.com
+    username: admin
+    password: netapp01
+    vserver: ansible
+    aggr: aggr1_tfrm2019_01
+    vol_name: "ansibleVol"
+  tasks:
+  - name: Volume Create
+    na_ontap_volume:
+      state: present
+      name: "{{ vol_name }}"
+      vserver: "{{ vserver }}"
+      aggregate_name: "{{ aggr }}"
+      size: 500
+      size_unit: mb
+      policy: default
+      junction_path: "/{{ vol_name }}"
+      hostname: "{{ hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      https: true
+      validate_certs: false
