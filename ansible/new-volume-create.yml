@@ -2,7 +2,7 @@
 - hosts: localhost
   name: Volume Action
   vars:
-    hostname: tfrm2019.frademo.europe.netapp.com
+    hostname: tfrm2019
     username: admin
     password: netapp01
     vserver: ansible
