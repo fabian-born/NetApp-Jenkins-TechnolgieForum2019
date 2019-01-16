@@ -7,7 +7,7 @@
     password: netapp01
     vserver: ansible
     aggr: aggr1_tfrm2019_01
-    vol_name: "ansibleVol"
+    vol_name: "ansibleVol2"
   tasks:
   - name: Volume Create
     na_ontap_volume:
