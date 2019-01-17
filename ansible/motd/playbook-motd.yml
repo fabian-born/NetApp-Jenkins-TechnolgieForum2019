@@ -1,0 +1,9 @@
+- name: change /etc/motd 
+  hosts: all
+  become: yes
+  tasks: 
+ 
+  - name: Copy /etc/motd 
+    copy: 
+      src: ./motd.template-full
+      dest: /etc/motd
