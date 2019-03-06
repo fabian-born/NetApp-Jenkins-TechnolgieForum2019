@@ -70,3 +70,45 @@
       password: "{{ netapp_password }}"
       https: true
       validate_certs: false
+
+  - name: Create User ONTAP user for trident and enable ssh
+    na_ontap_user:
+      state: "{{ state }}"
+      name: "{{ trident_username }}"
+      application: ssh
+      authentication_method: password
+      set_password: "{{ trident_userpassword }}"
+      lock_user: no
+      role_name: vsadmin
+      vserver: "{{ netapp_svm }}"
+      hostname: "{{ netapp_hostname }}"
+      username: "{{ netapp_username }}"
+      password: "{{ netapp_password }}"
+
+  - name: Create User ONTAP user for trident and enable ontapi
+    na_ontap_user:
+      state: "{{ state }}"
+      name: "{{ trident_username }}"
+      application: ontapi
+      authentication_method: password
+      set_password: "{{ trident_userpassword }}"
+      lock_user: no
+      role_name: vsadmin
+      vserver: "{{ netapp_svm }}"
+      hostname: "{{ netapp_hostname }}"
+      username: "{{ netapp_username }}"
+      password: "{{ netapp_password }}"
+
+  - name: Create User ONTAP user for trident and enable http
+    na_ontap_user:
+      state: "{{ state }}"
+      name: "{{ trident_username }}"
+      application: http
+      authentication_method: password
+      set_password: "{{ trident_userpassword }}"
+      lock_user: no
+      role_name: vsadmin
+      vserver: "{{ netapp_svm }}"
+      hostname: "{{ netapp_hostname }}"
+      username: "{{ netapp_username }}"
+      password: "{{ netapp_password }}"
