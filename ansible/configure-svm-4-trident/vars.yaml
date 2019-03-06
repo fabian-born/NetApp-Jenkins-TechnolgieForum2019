@@ -1,0 +1,13 @@
+netapp_hostname: "tfrm2019"
+cluster_name: "tfrm2019"
+
+netapp_username: "admin"
+netapp_password: "netapp01"
+
+netapp_svm: "ansibleVS02"
+netdata_ipaddress: "xxx.yyy.ddd.aaa"
+netdata_netmask: "255.255.254.0"
+
+netapp_aggregate: "aggr1_{{ cluster_name }}_01"
+state: present
+homeport: "e0d"
