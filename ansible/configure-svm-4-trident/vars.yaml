@@ -4,7 +4,7 @@ cluster_name: "tfrm2019"
 netapp_username: "admin"
 netapp_password: "netapp01"
 
-netapp_svm: "ansibleVS02"
+netapp_svm: "ansibleVS01"
 netdata_ipaddress: ""
 netdata_netmask: "255.255.254.0"
 
